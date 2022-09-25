@@ -1,4 +1,4 @@
-package solution;
+package solutions;
 
 /**
  * Example of Interface with private methods

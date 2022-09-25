@@ -1,4 +1,4 @@
-package solution;
+package solutions;
 
 /**
  * Demonstrates local variable inference
