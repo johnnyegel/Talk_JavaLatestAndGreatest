@@ -3,7 +3,7 @@ package solution;
 /**
  * Demonstrates local variable inference
  */
-public class Ex02_LocalVariableInference {
+public class Ex03_LocalVariableInference {
 
     /**
      * Interface for all sayers of Hello
