@@ -61,7 +61,7 @@ public class Ex09_Records {
 
     /**
      * Runs the demonstration
-     * @param args thy giveth ye
+     * @param args giveth ye method
      */
     public static void main(String[] args) {
         System.out.println("Example 09: Records");
