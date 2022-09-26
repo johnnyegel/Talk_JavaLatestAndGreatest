@@ -1,7 +1,7 @@
 import java.util.stream.Stream;
 
 /**
- * Demonstrates using a Teeing Collector to perform two actions on a stream
+ * Demonstrates using Switch expressions
  */
 public class Ex06_SwitchExpressions {
 
@@ -49,7 +49,7 @@ public class Ex06_SwitchExpressions {
      * @param args for yarrs truly
      */
     public static void main(String[] args) {
-        System.out.println("Example 04: Collectors.teeing() example");
+        System.out.println("Example 06: Switch expressions");
 
         // Chosen by dice-roll, guaranteed random
         int randomNumber = 4;

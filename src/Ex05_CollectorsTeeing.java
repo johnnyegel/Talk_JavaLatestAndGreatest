@@ -53,7 +53,7 @@ public class Ex05_CollectorsTeeing {
      * @param args for arguments
      */
     public static void main(String[] args) {
-        System.out.println("Example 04: Collectors.teeing() example");
+        System.out.println("Example 05: Collectors.teeing() example");
 
         // Create a stream of pretty integers
         Stream<Integer> prettyIntegers = Stream.of(1, 3, 9, 2, 42, 12, 7, 19, 32);
