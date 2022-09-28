@@ -1,7 +1,7 @@
 package solutions;
 
 /**
- * Demonstrates using a Teeing Collector to perform two actions on a stream
+ * Demonstrates using Switch expressions
  */
 public class Ex06_SwitchExpressions {
 
