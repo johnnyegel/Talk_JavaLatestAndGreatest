@@ -16,7 +16,7 @@ public class Loom02_HowManyVirtualThreads {
 
         List<Thread> threadList = new ArrayList<>();
 
-        System.out.println("Starting " + MAX_THREADS + "thread...");
+        System.out.println("Starting " + MAX_THREADS + " thread...");
         for (int i = 0; i < MAX_THREADS; i++) {
             Thread thread = new Thread(() -> {
                 try {
@@ -26,7 +26,7 @@ public class Loom02_HowManyVirtualThreads {
                 }
             });
 
-            if (i % 1000 == 0) {
+            if (i > 0 && i % 1000 == 0) {
                 System.out.println("Starting thread " + (i + 1) + " of " + MAX_THREADS);
             }
             threadList.add(thread);
