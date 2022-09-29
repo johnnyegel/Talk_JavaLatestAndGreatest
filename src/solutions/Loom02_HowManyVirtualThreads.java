@@ -1,3 +1,5 @@
+package solutions;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +20,7 @@ public class Loom02_HowManyVirtualThreads {
 
         System.out.println("Starting " + MAX_THREADS + " thread...");
         for (int i = 1; i <= MAX_THREADS; i++) {
-            // FIXME! Use Virtual Threads...
-            Thread thread = new Thread(() -> {
+            Thread thread = Thread.ofVirtual().factory().newThread(() -> {
                 try {
                     Thread.sleep(10000);
                 } catch (InterruptedException e) {
@@ -28,7 +29,7 @@ public class Loom02_HowManyVirtualThreads {
             });
 
             if (i % 1000 == 0) {
-                System.out.println("Starting thread " + (i + 1) + " of " + MAX_THREADS);
+                System.out.println("Starting thread " + i + " of " + MAX_THREADS);
             }
             threadList.add(thread);
             thread.start();
