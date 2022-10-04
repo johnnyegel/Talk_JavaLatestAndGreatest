@@ -8,4 +8,9 @@
       <module name="JavaLatestAndGreatest" options="--release 19 --enable-preview" />
     </option>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="JavaLatestAndGreatest" options="--add-exports java.base/jdk.internal.vm=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

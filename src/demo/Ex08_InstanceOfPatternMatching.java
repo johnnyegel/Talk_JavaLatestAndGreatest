@@ -1,3 +1,5 @@
+package demo;
+
 /**
  * Demonstrates Instance Of pattern matching
  */

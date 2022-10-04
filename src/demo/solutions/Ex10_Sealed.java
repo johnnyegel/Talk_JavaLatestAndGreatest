@@ -1,4 +1,4 @@
-package solutions;
+package demo.solutions;
 
 /**
  * Demonstrates the Sealed keyword

@@ -1,7 +1,4 @@
-package solutions;
-
-import java.util.ArrayList;
-import java.util.Objects;
+package demo.solutions;
 
 /**
  * Demonstrates Records

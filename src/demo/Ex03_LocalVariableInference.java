@@ -1,4 +1,4 @@
-package solutions;
+package demo;
 
 /**
  * Demonstrates local variable inference
@@ -46,7 +46,7 @@ public class Ex03_LocalVariableInference {
      * @return long type declaration you can not escape
      */
     static ReallyGenericSupperImplementation<TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo>
-    createGenericInstance() {
+            createGenericInstance() {
         return new ReallyGenericSupperImplementation<>(
                 new TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo());
     }
@@ -58,8 +58,11 @@ public class Ex03_LocalVariableInference {
     public static void main(String[] args) {
         System.out.println("Example 02: Type inference demonstrated");
 
-        var instance = new TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo();
-        var anotherInstance = createGenericInstance();
+        TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo instance =
+                new TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo();
+
+        ReallyGenericSupperImplementation<TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo>
+                anotherInstance = createGenericInstance();
 
         System.out.println("Asking first instance to say hello:");
         instance.sayHello();

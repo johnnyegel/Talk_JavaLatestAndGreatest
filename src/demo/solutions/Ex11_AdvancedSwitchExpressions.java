@@ -1,4 +1,4 @@
-package solutions;
+package demo.solutions;
 
 /**
  * Demonstrates using a Teeing Collector to perform two actions on a stream

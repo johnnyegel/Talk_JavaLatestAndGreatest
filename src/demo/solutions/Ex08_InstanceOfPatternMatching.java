@@ -1,4 +1,4 @@
-package solutions;
+package demo.solutions;
 
 /**
  * Demonstrates Instance Of pattern matching

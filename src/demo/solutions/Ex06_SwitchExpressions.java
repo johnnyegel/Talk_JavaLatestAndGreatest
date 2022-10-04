@@ -1,4 +1,4 @@
-import java.util.stream.Stream;
+package demo.solutions;
 
 /**
  * Demonstrates using Switch expressions
@@ -16,31 +16,12 @@ public class Ex06_SwitchExpressions {
     }
 
     static String explainThings(SomeThings type, int someNumber) {
-        String result;
-
-        switch(type) {
-            case THINGY:
-                result = "As plain as things go: " + (someNumber + 38);
-                break;
-
-            case THINGAMABOB:
-                result = "Things from bob: " + (someNumber * 2);
-                break;
-
-            case THINGAMAGIG:
-                result = "When I can't explain some thing: " + (someNumber + 42);
-                break;
-
-            case EVERYTHINGELSE:
-                result = "... and everyhing else: " + (someNumber * 3);
-                break;
-
-            default:
-                result = "This should not happen!";
-                break;
-        }
-
-        return "Thing explanation: " + result;
+        return "Thing explanation: " + switch (type) {
+            case THINGY -> "As plain as things go: " + (someNumber + 38);
+            case THINGAMABOB -> "Things from bob: " + (someNumber * 2);
+            case THINGAMAGIG -> "When I can't explain some thing: " + (someNumber + 42);
+            case EVERYTHINGELSE -> "... and everyhing else: " + (someNumber * 3);
+        };
     }
 
 
@@ -49,7 +30,7 @@ public class Ex06_SwitchExpressions {
      * @param args for yarrs truly
      */
     public static void main(String[] args) {
-        System.out.println("Example 06: Switch expressions");
+        System.out.println("Example 04: Collectors.teeing() example");
 
         // Chosen by dice-roll, guaranteed random
         int randomNumber = 4;

@@ -1,3 +1,5 @@
+package demo;
+
 /**
  * Demonstrates using a Teeing Collector to perform two actions on a stream
  */

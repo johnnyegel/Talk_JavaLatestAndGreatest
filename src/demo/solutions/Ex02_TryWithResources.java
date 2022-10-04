@@ -1,4 +1,4 @@
-package solutions;
+package demo.solutions;
 import java.io.*;
 import java.util.Optional;
 

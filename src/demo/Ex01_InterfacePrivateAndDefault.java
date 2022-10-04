@@ -1,4 +1,4 @@
-package solutions;
+package demo;
 
 /**
  * Example of Interface with private methods
@@ -10,18 +10,6 @@ public class Ex01_InterfacePrivateAndDefault {
      */
     interface NumberProvider {
         double number();
-
-        default double squared() {
-            return raisedToPower(2);
-        }
-
-        default double qubed() {
-            return raisedToPower(3);
-        }
-
-        private double raisedToPower(int power) {
-            return Math.pow(number(), power);
-        }
     }
 
     /**
@@ -31,6 +19,16 @@ public class Ex01_InterfacePrivateAndDefault {
         @Override
         public double number() {
             return 42;
+        }
+
+        double squared() {
+            double number = number();
+            return number * number;
+        }
+
+        double qubed() {
+            double number = number();
+            return number * number * number;
         }
     }
 
@@ -45,6 +43,5 @@ public class Ex01_InterfacePrivateAndDefault {
         System.out.println("- The best number: " + provider.number());
         System.out.println("- The best number squared: " + provider.squared());
         System.out.println("- The best number qubed: " + provider.qubed());
-
     }
 }

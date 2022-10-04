@@ -1,4 +1,4 @@
-package solutions;
+package demo.solutions;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

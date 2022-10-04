@@ -1,8 +1,8 @@
-package solutions;
+package demo;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Optional;
 
 /**
@@ -20,9 +20,22 @@ public class Ex04_FilesReadStringWriteString {
      * @return The file as a String
      */
     static Optional<String> loadExampleText(String filename) {
-        try {
-            return Optional.of(Files.readString(Path.of(filename)));
-        } catch (IOException e) {
+        // Create a text reader, which may fail with a FileNotFoundException
+        try (BufferedReader textReader = new BufferedReader(new FileReader(filename))) {
+            StringBuilder str = new StringBuilder();
+
+            // Read-line can throw IOException
+            String line = textReader.readLine();
+            while (line != null) {
+                str.append(line).append("\n");
+                line = textReader.readLine();
+            }
+
+            // Finalization of reader is handled for us
+            return Optional.of(str.toString());
+        }
+        catch (IOException ex) {
+            // Return empty if an exception happened
             return Optional.empty();
         }
     }

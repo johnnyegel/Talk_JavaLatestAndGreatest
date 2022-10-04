@@ -1,8 +1,7 @@
-import java.util.Random;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+package demo.solutions;
 
-import static java.lang.Thread.sleep;
+import java.util.Random;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Demonstrate async blocking code with Virtual Threads
@@ -82,7 +81,7 @@ public class Loom03_AsyncBlockingCode {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         // Run in a thread
-        Thread thread = Thread.ofPlatform().factory().newThread(() -> {
+        Thread thread = Thread.ofVirtual().factory().newThread(() -> {
             try {
                 System.out.println("Running blocking sequential task...");
                 sequentialProcessCode();

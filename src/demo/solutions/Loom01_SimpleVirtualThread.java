@@ -1,3 +1,5 @@
+package demo.solutions;
+
 /**
  * Example of Virtual Threads in Loom
  */
@@ -10,7 +12,7 @@ public class Loom01_SimpleVirtualThread {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Loom 01: Virtual Thread");
 
-        Thread thread = new Thread(() -> {
+        Thread thread = Thread.ofVirtual().factory().newThread(() -> {
             System.out.println("Hello from thread: [" + Thread.currentThread() + "]");
         });
 
