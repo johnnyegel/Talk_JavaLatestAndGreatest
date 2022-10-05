@@ -2,6 +2,7 @@ package demo.solutions;
 
 /**
  * Example of Virtual Threads in Loom
+ * WARNING! Requires Special LOOM JDK!
  */
 public class Loom01_SimpleVirtualThread {
 

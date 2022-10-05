@@ -1,7 +1,7 @@
 package demo.solutions;
 
 /**
- * Demonstrates using a Teeing Collector to perform two actions on a stream
+ * Demonstrates using Advanced Switch Expression (Third preview in Java 19)
  */
 public class Ex11_AdvancedSwitchExpressions {
 
@@ -38,6 +38,7 @@ public class Ex11_AdvancedSwitchExpressions {
             case Square square -> "Square square of area: " + square.area();
             case Triangle triangle -> "Triangle area: " + triangle.area();
             case SomeThings t -> "This is a thing: " + t.name();
+            case null -> "It was NULL!";
             default -> "No clue! - " + idunno;
         };
     }
@@ -50,6 +51,7 @@ public class Ex11_AdvancedSwitchExpressions {
             case Triangle triangle -> "Triangle area: " + triangle.area();
             case SomeThings t when t == SomeThings.THINGAMAGIG -> "My favorites: " + t.name();
             case SomeThings t -> "Other stuff: " + t.name();
+            case null -> "It was NULL!";
             default -> "No clue! - " + idunno;
         };
     }
@@ -76,6 +78,7 @@ public class Ex11_AdvancedSwitchExpressions {
         System.out.println(explainAnyObject(triangle2));
         System.out.println(explainAnyObject(square1));
         System.out.println(explainAnyObject(square2));
+        System.out.println(explainAnyObject(null));
 
         System.out.println(explainAnyObjectMore(thing1));
         System.out.println(explainAnyObjectMore(thing2));
@@ -83,6 +86,7 @@ public class Ex11_AdvancedSwitchExpressions {
         System.out.println(explainAnyObjectMore(triangle2));
         System.out.println(explainAnyObjectMore(square1));
         System.out.println(explainAnyObjectMore(square2));
+        System.out.println(explainAnyObject(null));
 
     }
 }

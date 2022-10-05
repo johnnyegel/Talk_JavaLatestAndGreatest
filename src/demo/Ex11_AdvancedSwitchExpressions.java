@@ -1,7 +1,7 @@
 package demo;
 
 /**
- * Demonstrates using a Teeing Collector to perform two actions on a stream
+ * Demonstrates using Advanced Switch Expression (Third preview in Java 19)
  */
 public class Ex11_AdvancedSwitchExpressions {
 
@@ -61,5 +61,6 @@ public class Ex11_AdvancedSwitchExpressions {
         System.out.println(explainAnyObject(triangle2));
         System.out.println(explainAnyObject(square1));
         System.out.println(explainAnyObject(square2));
+        System.out.println(explainAnyObject(null));
     }
 }
