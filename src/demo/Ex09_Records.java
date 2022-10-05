@@ -8,10 +8,10 @@ import java.util.Objects;
 public class Ex09_Records {
 
     static final class MyData {
-        private int _number;
-        private String _stringValue;
-        private long _length;
-        private double _probability;
+        private final int _number;
+        private final String _stringValue;
+        private final long _length;
+        private final double _probability;
 
         MyData(int number, String stringValue, long length, double probability) {
             _number = number;
