@@ -42,7 +42,7 @@ public class Ex11_AdvancedSwitchExpressions {
             default -> "No clue! - " + idunno;
         };
     }
-/*
+
     static String explainAnyObjectMore(Object idunno) {
         return switch(idunno) {
             case Square square when square.area() > 25 -> "Big Square of area: " + square.area();
@@ -55,7 +55,7 @@ public class Ex11_AdvancedSwitchExpressions {
             default -> "No clue! - " + idunno;
         };
     }
-*/
+
     /**
      * Runs the demonstration
      * @param args for yarrs truly
@@ -79,7 +79,7 @@ public class Ex11_AdvancedSwitchExpressions {
         System.out.println(explainAnyObject(square1));
         System.out.println(explainAnyObject(square2));
         System.out.println(explainAnyObject(null));
-/*
+
         System.out.println(explainAnyObjectMore(thing1));
         System.out.println(explainAnyObjectMore(thing2));
         System.out.println(explainAnyObjectMore(triangle1));
@@ -87,6 +87,6 @@ public class Ex11_AdvancedSwitchExpressions {
         System.out.println(explainAnyObjectMore(square1));
         System.out.println(explainAnyObjectMore(square2));
         System.out.println(explainAnyObject(null));
-*/
+
     }
 }
