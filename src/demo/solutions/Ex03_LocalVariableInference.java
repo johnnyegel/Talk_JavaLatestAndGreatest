@@ -28,9 +28,9 @@ public class Ex03_LocalVariableInference {
      * A very generic class
      * @param <T> The type we are genericing about
      */
-    static class ReallyGenericSupperImplementation<T extends HelloSayer> implements HelloSayer {
+    static class ReallyGenericSupplierImplementation<T extends HelloSayer> implements HelloSayer {
         private final T _thingamabob;
-        public ReallyGenericSupperImplementation(T thingamabob) {
+        public ReallyGenericSupplierImplementation(T thingamabob) {
             _thingamabob = thingamabob;
         }
 
@@ -45,9 +45,9 @@ public class Ex03_LocalVariableInference {
      * Instance creator helper method
      * @return long type declaration you can not escape
      */
-    static ReallyGenericSupperImplementation<TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo>
+    static ReallyGenericSupplierImplementation<TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo>
     createGenericInstance() {
-        return new ReallyGenericSupperImplementation<>(
+        return new ReallyGenericSupplierImplementation<>(
                 new TheLongestMostRidiculousClassNameICouldComeUpWithForTypeInferenceDemo());
     }
 
