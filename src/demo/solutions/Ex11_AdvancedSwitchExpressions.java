@@ -44,11 +44,11 @@ public class Ex11_AdvancedSwitchExpressions {
 
     static String explainAnyObjectMore(Object idunno) {
         return switch(idunno) {
-            case Square square && square.area() > 25 -> "Big Square of area: " + square.area();
+            case Square square when square.area() > 25 -> "Big Square of area: " + square.area();
             case Square square -> "Square square of area: " + square.area();
-            case Triangle triangle && triangle.area() < 40 -> "Small Triangle area: " + triangle.area();
+            case Triangle triangle when triangle.area() < 40 -> "Small Triangle area: " + triangle.area();
             case Triangle triangle -> "Triangle area: " + triangle.area();
-            case SomeThings t && t == SomeThings.THINGAMAGIG -> "My favorites: " + t.name();
+            case SomeThings t when t == SomeThings.THINGAMAGIG -> "My favorites: " + t.name();
             case SomeThings t -> "Other stuff: " + t.name();
             default -> "No clue! - " + idunno;
         };

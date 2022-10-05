@@ -42,6 +42,9 @@ public class Loom04_StructuredScopes {
         }
     }
 
+    // Include ShutdownOnSuccess and ShutdownOnFailure examples as well
+    // https://download.java.net/java/early_access/loom/docs/api/jdk.incubator.concurrent/jdk/incubator/concurrent/StructuredTaskScope.html
+
     public static void main(String[] args) throws InterruptedException {
         simpleExample();
     }
